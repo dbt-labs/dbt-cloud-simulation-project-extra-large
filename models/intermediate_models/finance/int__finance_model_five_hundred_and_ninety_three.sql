@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized='ephemeral'
+    )
+}}
+
 with model_a as
   (select *
    from {{ ref('stg__sample_customer_data_purchases_fct') }})

@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized='ephemeral'
+    )
+}}
+
 with model_a as
   (select *
    from {{ ref('core__model_four_hundred_and_nineteen') }})

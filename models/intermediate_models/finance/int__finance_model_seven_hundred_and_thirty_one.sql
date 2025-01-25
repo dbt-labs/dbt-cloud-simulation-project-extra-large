@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized='ephemeral'
+    )
+}}
+
 with model_a as
   (select *
    from {{ ref('stg__medicare_sample_data_2010_beneficiary_summary_file_sample') }})

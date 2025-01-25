@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized='ephemeral'
+    )
+}}
+
 with model_a as
   (select *
    from {{ ref('int__revenue_model_six_hundred_and_seventy') }})

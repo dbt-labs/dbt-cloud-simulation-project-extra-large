@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized='ephemeral'
+    )
+}}
+
 with model_a as
   (select *
    from {{ ref('rollup__model_one_thousand,_three_hundred_and_thirty_nine') }})

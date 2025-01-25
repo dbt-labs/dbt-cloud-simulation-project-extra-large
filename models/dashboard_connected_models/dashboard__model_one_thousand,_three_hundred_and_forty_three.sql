@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized='ephemeral'
+    )
+}}
+
 with model_a as
   (select * exclude unqiue_key,
             unqiue_key as model_a_unqiue_key
